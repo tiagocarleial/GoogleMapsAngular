@@ -1,0 +1,18 @@
+<div class="search">
+  <form #form="ngForm" (submit)="onSubmit()">
+    <input type="text" placeholder="Search place name" name="city" [(ngModel)]="placeName">
+  </form>
+</div>
+<img alt="logo" src="/src/assets/logomaps.png">
+<div class="container" *ngIf="mapData" >
+  <div class="upper-data">
+    
+    <div class="map-data">
+      <div class="map">
+      </div>
+       {{ mapData.results[0].name }}
+       {{ mapData.status }}
+       
+    </div>
+  </div>
+</div>
