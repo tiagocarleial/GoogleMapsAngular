@@ -1,18 +1,65 @@
-<div class="search">
-  <form #form="ngForm" (submit)="onSubmit()">
-    <input type="text" placeholder="Search place name" name="city" [(ngModel)]="placeName">
-  </form>
-</div>
-<img alt="logo" src="/src/assets/logomaps.png">
-<div class="container" *ngIf="mapData" >
-  <div class="upper-data">
-    
-    <div class="map-data">
-      <div class="map">
+<div class="container-xxl">
+  <div class="container-fluid col-12 d-flex justify-content-center" >
+    <div class="row">
+      <div class="col-sm">
+        <img src="https://cdn2.civitatis.com/estados-unidos/nueva-york/guia/times-square-grid-m.jpg" alt="alternatetext" width="400px" height="300px">
       </div>
-       {{ mapData.results[0].name }}
-       {{ mapData.status }}
-       
+      <div class="col-sm">
+        <img src="https://www.plano-de-saude-saopaulo.com.br/wp-content/uploads/2017/07/plano-de-saude-em-fortaleza-ceara.jpg" alt="alternatetext" width="400px" height="300px">
+      </div>
+      <div class="col-sm">
+        <img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1643926886/kzjdjct1nudxtiltz6u4.jpg" alt="alternatetext" width="400px" height="300px">
+      </div>
     </div>
   </div>
 </div>
+<br/>
+<div class="container-xxl ">
+  <div class="row gy-3">
+    <div class="col-12 col-sm-12">
+      <div class="card">
+        <div class="card-header bg-info">
+          <div class="search text-center">
+            <form #form="ngForm" (submit)="onSubmit()">
+              <input type="text" placeholder="Search place name" name="city" [(ngModel)]="placeName">
+            </form>
+          </div>
+        </div>
+        <div class="card-body"  >
+          <div class="row">
+            <div class="col-12 col-sm-5 col-md-5">
+              <div class="labelForm">
+                <label class="fw-bold p-1">Place name</label>
+                <p class="p-1">{{ mapData.results[0].name }}</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-5 col-md-5">
+              <div class="labelForm">
+                <label class="fw-bold p-1">Location Address</label>
+                <p class="p-1">{{ mapData.results[0].formatted_address }}</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-5 col-md-5">
+              <div class="labelForm">
+                <label class="fw-bold p-1">Information</label>
+                <p class="p-1">{{ mapData.results[0].types[0] }} , {{ mapData.results[0].types[1] }}</p>
+              </div>
+            </div>
+            <div class="col-12 col-sm-5 col-md-5">
+              <div class="labelForm">
+                <label class="fw-bold p-1">Geo Location</label>
+                <p class="p-1">{{ mapData.results[0].geometry.location.lat }} , {{ mapData.results[0].geometry.location.lng }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+
+
+
