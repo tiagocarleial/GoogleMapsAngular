@@ -1,4 +1,9 @@
-# AgendaApp
+# GooglePlacesApp
+
+Web to search for places around the world. Typescript / Angular. Using Google API from RapidAPI
+
+![googleplaces](https://user-images.githubusercontent.com/47113697/176959474-861e65c7-abaf-4d71-9868-106749ec5419.png)
+![googleplaces2](https://user-images.githubusercontent.com/47113697/176959690-e55f6466-46b0-42e4-b518-4918cccab931.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
 
